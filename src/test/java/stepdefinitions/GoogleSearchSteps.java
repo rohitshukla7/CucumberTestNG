@@ -22,12 +22,9 @@ public class GoogleSearchSteps {
         googleSearchPage.goToHomePage();
     }
 
-    @When("I search for following keywords")
-    public void i_search_for_keyword(List<String> keywords) {
-        for (String keyword : keywords ){
-            googleSearchPage.searchFor(keyword);
-        }
-
+    @When("I search for {string} keyword")
+    public void i_search_for_keyword(String string) {
+        googleSearchPage.searchFor(string);
     }
 
     @When("I click on the first search result")

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class GoogleSearchPage {
 
-    private WebDriver driver;
+    public WebDriver driver;
 
     private By searchBox = By.name("q");
     private By searchButton = By.name("btnK");

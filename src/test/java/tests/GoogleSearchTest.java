@@ -13,20 +13,10 @@ import pages.GoogleSearchPage;
 @CucumberOptions(features = "src/test/resources/features/GoogleSearch.feature", glue = "stepdefinitions")
 public class GoogleSearchTest extends AbstractTestNGCucumberTests {
 
-    @BeforeMethod
-    public void setUp() {
-        DriverFactory.getDriver();
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        DriverFactory.closeDriver();
-    }
-
     @Test
     public void testGoogleSearch() {
-        String url = "google.com";
-        Assert.assertTrue(url.contains("https://www.python.org/"));
+        //String url = "google.com";
+        //Assert.assertTrue(url.contains("https://www.python.org/"));
         // This is a placeholder method and does not need to contain any code.
         // The test logic is implemented in the Cucumber step definitions.
     }
