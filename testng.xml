@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
+    <packages>
+        <package name="stepdefinitions"/>
+    </packages>
     <test verbose="2" preserve-order="true"
           name="C:/Users/zrohi/AutomationProject/CucumberSelenium/src/test/java/tests/GoogleSearchTest.java">
         <classes>
@@ -8,6 +11,15 @@
                 <methods>
                     <include name="testGoogleSearch"/>
                 </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="BDD Test">
+        <parameter name="cucumber.features" value="src/test/resources/features/GoogleSearch.feature"/>
+        <classes>
+            <class name="tests.GoogleSearchTest">
+                
             </class>
         </classes>
     </test>
