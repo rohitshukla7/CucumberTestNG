@@ -8,3 +8,9 @@ Feature: Google Search
     When I search for "Python" keyword
     And I click on the first search result
     Then I get the URL and title of the first search result
+
+
+  Scenario: Explore Java on Google search
+    Given I am on Google webpage
+    When I enter "Java" keyword
+    Then Click on first result and get title of webpage

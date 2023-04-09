@@ -41,4 +41,29 @@ public class GoogleSearchSteps {
         Assert.assertTrue(url.contains("https://www.python.org/"));
         DriverFactory.closeDriver();
     }
+
+
+    // for another scenario
+
+    @Given("I am on Google webpage")
+    public void i_am_on_google_webpage() {
+        googleSearchPage = new GoogleSearchPage(DriverFactory.getDriver());
+        googleSearchPage.goToHomePage();
+    }
+    @When("I enter {string} keyword")
+    public void i_enter_keyword(String string) {
+        googleSearchPage.searchFor(string);
+    }
+    @Then("Click on first result and get title of webpage")
+    public void click_on_first_result_and_get_title_of_webpage() {
+        googleSearchPage.clickOnFirstResult();
+        String title = googleSearchPage.getTitleOfFirstResult();
+        String url = googleSearchPage.getURLofFirstResult();
+        System.out.println("Title of first result is: " + title);
+        System.out.println("URL of first result is: " + url);
+        Assert.assertTrue(url.contains("https://www.java.com/en/"));
+        DriverFactory.closeDriver();
+
+    }
+
 }
